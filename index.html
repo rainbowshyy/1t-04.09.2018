@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My window</title>
+        <link rel="stylesheet" type="text/css" href="homeStylesheet.css">
+    </head>
+    <body onmousemove="handToCursor(event)">
+        <div id="windowBackground" onclick="windowOpen(0)">
+            <div id="windowHand"></div>
+        </div>
+        <div id="windowFrame"></div>
+        <div id="wholeWindow">
+            <div id="anchor">
+                <div class="hoverHelp" onclick="windowOpen(0)">
+                    <div class="window hoverThing" id="simenDen">
+                        <div class="title" style="font-size: 40px; padding-top: 10px; background: rgb(0,0,0); color: rgb(250,250,250);">Simen's den</div>
+                        <p>
+                        This is where I store all my presentable trash
+                        </p>
+                        <p>
+                        Make yourself at home
+                        </p>
+                    </div>
+                </div>
+                <div class="hoverHelp" onclick="windowOpen(html)">
+                    <div class="window hoverThing" id="html">
+                        <div class="title">Random</div>
+                        <div id="htmlDesc">
+                            <p>
+                            Mostly websites and porn
+                            </p>
+                            <p>
+                                <span style="color: rgb(100,250,100); font-family: Comic Sans MS;">graphic design is my passion &#128056;</span>
+                            </p>
+                        </div>
+                        <div id="htmlContent" class="hidden windowContent">
+                            <a href="diaqshaqgaming/diaqshaq.html">
+                                <div class="windowContentTitle">DiaqShaq</div>
+                                <div class="windowContentTooltip">The first "real" html document I made, immortalizing the legend himself.</div>
+                            </a>
+                            <a href="internett/index.html">
+                                <div class="windowContentTitle">Internet</div>
+                                <div class="windowContentTooltip">People think the internet don't be like it is, but it do</div>
+                            </a>
+                            <a href="skjema/index.html">
+                                <div class="windowContentTitle">Form</div>
+                                <div class="windowContentTooltip">A form that can be filled out. I worked very hard on making it as user-friendly as possible.</div>
+                            </a>
+                            <a href="juleside/index.html">
+                                <div class="windowContentTitle">Juleside</div>
+                                <div class="windowContentTooltip">DU KAN KUN ÅPNE DENNE OM DET ER JUL! &#128545;</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hoverHelp" onclick="windowOpen(javascript)">
+                    <div class="window hoverThing" id="javascript">
+                        <div class="title">Javascript dump</div>
+                        <div id="javascriptDesc">
+                            <p>
+                            this one is a mess please go look at something else :&#40; (don't bother "playing" anything, nothing has any depth or content.)
+                            </p>
+                            <p>
+                            Class-based programming? I don't know her
+                            </p>
+                        </div>
+                        <div id="javascriptContent" class="hidden windowContent">
+                            <a href="turbodiaq/turbodiaq.html">
+                                <div class="windowContentTitle">Idle game test</div>
+                                <div class="windowContentTooltip">The first game-like javascript I made, please don't look at it too much. It's really messy.</div>
+                            </a>
+                            <a href="proxy/index.html">
+                                <div class="windowContentTitle">"hmmm"</div>
+                                <div class="windowContentTooltip">idk man the folder is just named hmmm i made this like 2 years ago</i></div>
+                            </a>
+                            <a href="tiles/tiles.html">
+                                <div class="windowContentTitle">Tile-based movement</div>
+                                <div class="windowContentTooltip">A framework for tilebased movement in javasript using canvas. (I think this one is broken...)</div>
+                            </a>
+                            <a href="tilesgmae/index.html">
+                                <div class="windowContentTitle">Pathfinding</div>
+                                <div class="windowContentTooltip">A more refined framework for tilebased movement, with built-in pathfinding utilizing the <i>A* algorithm.</i></div>
+                            </a>
+                            <a href="proxy/index.html">
+                                <div class="windowContentTitle">Proxy simulator</div>
+                                <div class="windowContentTooltip">"Oh look! Finally a video game adaptation of my favorite movie, <i>Warriors of the Net (1999)!"</i></div>
+                            </a>
+                            <a href="ROGUELIKE/index.html">
+                                <div class="windowContentTitle">Proxy simulator</div>
+                                <div class="windowContentTooltip">"Oh look! Finally a video game adaptation of my favorite movie, <i>Warriors of the Net (1999)!"</i></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hoverHelp" onclick="windowOpen(school)">
+                    <div class="window hoverThing" id="school">
+                        <div class="title">Projects</div>
+                        <div id="schoolDesc">
+                            <span style="position: absolute; color: rgb(0,0,0); width: 130px; white-space: normal; font-family: Comic Sans MS; font-size: 14px;"><p>oof ouch owie, my motivation</p></span>
+                            <img src="img/school.jpg">
+                        </div>
+                        <div id="schoolContent" class="hidden windowContent">
+                            <a href="platforming/index.html">
+                                <div class="windowContentTitle">Shoot</div>
+                                <div class="windowContentTooltip">Oh shoot.</div>
+                            </a>
+                            <a href="spells/index.html">
+                                <div class="windowContentTitle">Dungeon</div>
+                                <div class="windowContentTooltip">yep cock</div>
+                            </a>
+                            <a href="office/index.html">
+                                <div class="windowContentTitle">The Office</div>
+                                <div class="windowContentTooltip">camputor</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="iMadeThis">Simen B. Skjevdal 2STD</div>
+        <script src="homeHand.js"></script>
+        <script src="menu.js"></script>
+    </body>
+</html>

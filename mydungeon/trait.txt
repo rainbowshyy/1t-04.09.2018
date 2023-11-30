@@ -1,0 +1,55 @@
+TRAIT
+traitid INT
+name VARCHAR(45)
+desc TEXT
+speed
+speedclimb
+speedswim
+speedflying
+speedflyingnormal INT(NULL)
+attack INT
+
+TRAITARMOR
+traitid INT
+armorid INT
+
+TRAITTOOL
+traitid INT
+toolid INT
+
+TRAITWEAPON
+traitid
+weaponid INT
+
+TRAITDAMAGEIMMUNITY
+traitid INT
+damageid INT
+
+TRAITDAMAGERESISTANCE
+traitid INT
+damageid INT
+
+TRAITSPELL
+traitid INT
+spellid INT
+spellabilityid INT
+spelllevel INT
+
+TRAITDAMAGEADVANTAGE
+traitid INT
+damageid INT
+
+TRAITSKILL
+traitid INT
+skillid INT
+
+SELECTION
+selectionid INT
+name VARCHAR(45)
+desc TEXT
+
+SELECTIONOPTION
+optionid INT
+selectionid INT
+name VARCHAR(45)
+desc TEXT

@@ -1,0 +1,135 @@
+{ "frames": {
+   "human-skinA-stanceA-punchA 0.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 39, "h": 66 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 18, "y": 14, "w": 39, "h": 66 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-punchA 1.aseprite": {
+    "frame": { "x": 39, "y": 0, "w": 39, "h": 66 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 18, "y": 14, "w": 39, "h": 66 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-punchA 2.aseprite": {
+    "frame": { "x": 78, "y": 0, "w": 39, "h": 66 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 18, "y": 14, "w": 39, "h": 66 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-punchA 3.aseprite": {
+    "frame": { "x": 117, "y": 0, "w": 40, "h": 66 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 17, "y": 14, "w": 40, "h": 66 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-punchA 4.aseprite": {
+    "frame": { "x": 157, "y": 0, "w": 39, "h": 66 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 18, "y": 14, "w": 39, "h": 66 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-punchA 5.aseprite": {
+    "frame": { "x": 196, "y": 0, "w": 40, "h": 66 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 17, "y": 14, "w": 40, "h": 66 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-punchA 6.aseprite": {
+    "frame": { "x": 236, "y": 0, "w": 40, "h": 66 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 17, "y": 14, "w": 40, "h": 66 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-punchA 7.aseprite": {
+    "frame": { "x": 276, "y": 0, "w": 40, "h": 66 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 17, "y": 14, "w": 40, "h": 66 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-punchA 8.aseprite": {
+    "frame": { "x": 316, "y": 0, "w": 47, "h": 66 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 18, "y": 14, "w": 47, "h": 66 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-punchA 9.aseprite": {
+    "frame": { "x": 363, "y": 0, "w": 47, "h": 66 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 21, "y": 14, "w": 47, "h": 66 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-punchA 10.aseprite": {
+    "frame": { "x": 410, "y": 0, "w": 53, "h": 66 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 21, "y": 14, "w": 53, "h": 66 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-punchA 11.aseprite": {
+    "frame": { "x": 463, "y": 0, "w": 58, "h": 66 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 18, "y": 14, "w": 58, "h": 66 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-punchA 12.aseprite": {
+    "frame": { "x": 521, "y": 0, "w": 39, "h": 66 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 18, "y": 14, "w": 39, "h": 66 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-punchA 13.aseprite": {
+    "frame": { "x": 560, "y": 0, "w": 39, "h": 66 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 18, "y": 14, "w": 39, "h": 66 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-punchA 14.aseprite": {
+    "frame": { "x": 599, "y": 0, "w": 39, "h": 66 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 18, "y": 14, "w": 39, "h": 66 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.15-x64",
+  "image": "human-skinA-stanceA-punchA.png",
+  "format": "I8",
+  "size": { "w": 1200, "h": 96 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "slices": [
+  ]
+ }
+}

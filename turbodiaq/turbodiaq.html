@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Turbo Diaco</title>
+        <link rel="stylesheet" type="text/css" href="turbodiaq.css">
+    </head>
+    
+    <body>
+        <div id="wrapper">
+            <div id="game_focus">
+                <div id="enemy_info">
+                    <div id="enemy_info_content">
+                        <div id="enemy_info_text">
+                            <div id="enemy_info_area">
+                                <div id="enemy_info_area_text">area: ?</div>
+                                <div id="enemy_info_region_text">region: ?</div>
+                            </div>
+                            <div id="enemy_info_current_enemy">
+                                <div id="enemy_info_current_enemy_name">missingno</div>
+                                <div id="enemy_info_current_enemy_level">level ?</div>
+                            </div>
+                            <div id="enemy_info_enemies">
+                                <div style="display: flex; flex-direction: column; order: 1; flex-basis: 70%; white-space: nowrap;">
+                                    <div id="enemy_info_enemies_left">Enemies left: ?</div>
+                                    <div id="auto_progress_checkbox">
+                                        <input id="auto_progress" type="checkbox" style="float: right; height: 100%; padding-left: 100%;" onclick="update_auto_progress()">Auto-progress: 
+                                    </div>
+                                </div>
+                                <button onclick="next_room()" style="order: 2; flex-basis: 30%;">Next room</button>
+                            </div>
+                        </div>
+                        <div class="bar" style="order: 2; flex-basis: 20%;">
+                            <div id="current_enemy_health" class="bar_animation"></div>
+                            <div id="current_enemy_health_fade" class="bar_fade"></div>
+                            <div class="bar_overlay"></div>
+                            <div id="enemy_health_number" class="bar_number" style="bottom: 300%; font-size: 70%;">?/?</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="graphics"></div>
+                <div id="essential_stats">
+                    <div id="stats_content">
+                        <div class="bar">
+                            <div id="current_health" class="bar_animation"></div>
+                            <div id="health_bar_fade" class="bar_fade"></div>
+                            <div class="bar_overlay"></div>
+                            <div id="health_number" class="bar_number">?/?</div>
+                        </div>
+                        <div class="bar">
+                            <div id="current_mana" class="bar_animation"></div>
+                            <div id="mana_bar_fade" class="bar_fade"></div>
+                            <div class="bar_overlay"></div>
+                            <div id="mana_number" class="bar_number">?/?</div>
+                        </div>
+                        <div class="bar" style="flex-basis: 20%;">
+                            <div id="current_exp"class="bar_animation"></div>
+                            <div class="bar_overlay" style="bottom: 100%;"></div>
+                            <div id="exp_number" class="bar_number" style="bottom: 200%; font-size: 70%;">?/? Level: ?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="game_info">
+                <div id="menu_nav">
+                    <div id="nav_content">
+                        <button onclick="nav_menu_cycle(-1)" style="flex-basis: 10%;">Left</button>
+                        <div id="nav_content_header">Navigation</div>
+                        <button onclick="nav_menu_cycle(1)" style="flex-basis: 10%;">Right</button>
+                    </div>
+                </div>
+                <div id="menu">
+                    <div id="menu_content">
+                        <div class="notification_wrapper">
+                            <div id="notification1" class="notification">
+                                <div class="notification_close" onclick="this.parentElement.style.display='none';">&times;</div>
+                                <div id="notification1text" class="notification_text"></div>
+                            </div>
+                            <div id="notification2" class="notification">
+                                <div class="notification_close" onclick="this.parentElement.style.display='none';">&times;</div>
+                                <div id="notification2text" class="notification_text"></div>
+                            </div>
+                            <div id="notification3" class="notification">
+                                <div class="notification_close" onclick="this.parentElement.style.display='none';">&times;</div>
+                                <div id="notification3text" class="notification_text"></div>
+                            </div>
+                        </div>
+                        <div id="spells">
+                            <div id="attack_timer">
+                                <div id="attack_timer_bar_fade"></div>
+                                <div id="attack_timer_bar"></div>
+                                <div id="attack_timer_bar_overlay" onclick="charge_projectile()"></div>
+                                <div id="attack_timer_bar_hider"></div>
+                            </div>
+                        </div>
+                        <div id="skill_tree">
+                            <div class="skill_empty" style="height: 16vw; flex-grow: 0;"><div id="skill_points" style="position: sticky; color: rgb(230,230,230); padding-top: 3vw;">Skill points: ?</div></div>
+                            <div class="big_skill_row">
+                                <div class="skill_wrapper" style="">
+                                    <div id="perk0" class="big_skill skill tooltip_container" onclick="get_skill(0)">
+                                        <div id="perkicon0" class="skill_icon"></div>
+                                        <div class="tooltip">
+                                            <div class="tooltip_icon"></div>
+                                            <div class="tooltip_text">
+                                                <b>Spell novice</b>
+                                                <br>
+                                                Increases the base charge-per-click of your spells by 1, and the base charge-per-second of your spells by 0.05.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill_empty">
+                                <svg height="100%" width="100%">
+                                    <line class="perkline perkline1 perkline2" x1="50%" y1="0" x2="50%" y2="50%" stroke = "rgb(20, 20, 20)" stroke-width = "3" />
+                                    <line id="ass" class="perkline perkline1" x1="25%" y1="50%" x2="50%" y2="50%" stroke = "rgb(20, 20, 20)" stroke-width = "3" />
+                                    <line class="perkline perkline2" x1="50%" y1="50%" x2="75%" y2="50%" stroke = "rgb(20, 20, 20)" stroke-width = "3" />
+                                    <line class="perkline perkline1" x1="25%" y1="50%" x2="25%" y2="100%" stroke = "rgb(20, 20, 20)" stroke-width = "3" />
+                                    <line class="perkline perkline2" x1="75%" y1="50%" x2="75%" y2="100%" stroke = "rgb(20, 20, 20)" stroke-width = "3" />
+                                </svg>
+                            </div>
+                            <div class="small_skill_row">
+                                <div class="skill_wrapper">
+                                    <div id="perk1" class="small_skill skill tooltip_container" onclick="get_skill(1)">
+                                        <div id="perkicon1" class="skill_icon"></div>    
+                                        <div class="tooltip">
+                                            <div class="tooltip_icon"></div>
+                                            <div class="tooltip_text">
+                                                <b>Concentration I</b>
+                                                <br>
+                                                Increases the charge-per-click multiplier of your spells by +25% (additive).
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill_wrapper">
+                                    <div id="perk2" class="small_skill skill tooltip_container" onclick="get_skill(2)">
+                                        <div id="perkicon2" class="skill_icon"></div>
+                                        <div class="tooltip">
+                                            <div class="tooltip_icon"></div>
+                                            <div class="tooltip_text">
+                                                <b>Innate magic I</b>
+                                                <br>
+                                                Increases the charge-per-second multiplier of your spells by +100% (additive).
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill_empty">
+                                <svg height="100%" width="100%">
+                                    <line class="perkline perkline3" x1="25%" y1="0" x2="25%" y2="100%" stroke = "rgb(20, 20, 20)" stroke-width = "3" />
+                                    <line class="perkline perkline4" x1="75%" y1="0" x2="75%" y2="100%" stroke = "rgb(20, 20, 20)" stroke-width = "3" />
+                                </svg>
+                            </div>
+                            <div class="small_skill_row">
+                                <div class="skill_wrapper">
+                                    <div id="perk3" class="small_skill skill tooltip_container" onclick="get_skill(3)">
+                                        <div id="perkicon3" class="skill_icon"></div>    
+                                        <div class="tooltip">
+                                            <div class="tooltip_icon"></div>
+                                            <div class="tooltip_text">
+                                                <b>Concentration II</b>
+                                                <br>
+                                                Increases the charge-per-click multiplier of your spells by +25% (additive).
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill_wrapper">
+                                    <div id="perk4" class="small_skill skill tooltip_container" onclick="get_skill(4)">
+                                        <div id="perkicon4" class="skill_icon"></div>
+                                        <div class="tooltip">
+                                            <div class="tooltip_icon"></div>
+                                            <div class="tooltip_text">
+                                                <b>Innate magic II</b>
+                                                <br>
+                                                Increases the charge-per-second multiplier of your spells by +100% (additive).
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="turbodiaq.js"></script>
+    </body>
+</html>

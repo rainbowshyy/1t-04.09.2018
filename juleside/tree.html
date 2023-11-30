@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Christmas tree</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </head>
+    <body>
+        <canvas id="canvasSnow"></canvas>
+        <div id="flexWrapper">
+            <div id="navigationBar">
+                <div id="navigationGradient"></div>
+                <span id="navigationHeader">Christmas navigation</span>
+                <ul id="navigationList">
+                    <a href="present.html">
+                        <li>Christmas present<img src="img/wreath.png"></li>
+                    </a>
+                    <a href="tree.html">
+                        <li>Christmas tree<img src="img/wreath.png"></li>
+                    </a>
+                    <a href="facts.html">
+                        <li>Christmas facts<img src="img/wreath.png"></li>
+                    </a>
+                    <a href="charts.html">
+                        <li>Christmas charts<img src="img/wreath.png"></li>
+                    </a>
+                    <a href="isit.html">
+                        <li>Is it christmas?<img src="img/wreath.png"></li>
+                    </a>
+                </ul>
+            </div>
+            <div id="trees">
+                <div id="top">
+                    <div id="treeImage"></div>
+                    <div id="treeTable">
+                        <table>
+                            <tr>
+                                <th>Name:</th>
+                                <td id="name">Oak</td>
+                            </tr>
+                            <tr>
+                                <th>Star placeability:</th>
+                                <td id="star">2/10</td>
+                            </tr>
+                            <tr>
+                                <th>Decoration potential:</th>
+                                <td id="decoration">8/10</td>
+                            </tr>
+                            <tr>
+                                <th>Taste:</th>
+                                <td id="taste">Bitter</td>
+                            </tr>
+                            <tr>
+                                <th>Final christmas score:</th>
+                                <td id="christmas">8/10</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="treeQuote">"A bit unconventional, but still an original and decently good choice."</div>
+                <div id="treeButtons">
+                    <div class="treeButton" onclick="TreeCycle(-1)">Previous</div>
+                    <div class="treeButton" onclick="TreeCycle(1)">Next</div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="snow.js"></script>
+    <script src="tree.js"></script>
+</html>

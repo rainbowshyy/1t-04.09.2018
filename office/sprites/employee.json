@@ -1,0 +1,79 @@
+{ "frames": {
+   "employee 0.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 23, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 5, "y": 0, "w": 23, "h": 48 },
+    "sourceSize": { "w": 32, "h": 48 },
+    "duration": 1
+   },
+   "employee 1.aseprite": {
+    "frame": { "x": 23, "y": 0, "w": 23, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 5, "y": 0, "w": 23, "h": 48 },
+    "sourceSize": { "w": 32, "h": 48 },
+    "duration": 1
+   },
+   "employee 2.aseprite": {
+    "frame": { "x": 46, "y": 0, "w": 31, "h": 47 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 0, "w": 31, "h": 47 },
+    "sourceSize": { "w": 32, "h": 48 },
+    "duration": 80
+   },
+   "employee 3.aseprite": {
+    "frame": { "x": 77, "y": 0, "w": 32, "h": 48 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 48 },
+    "sourceSize": { "w": 32, "h": 48 },
+    "duration": 80
+   },
+   "employee 4.aseprite": {
+    "frame": { "x": 109, "y": 0, "w": 31, "h": 47 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 0, "w": 31, "h": 47 },
+    "sourceSize": { "w": 32, "h": 48 },
+    "duration": 80
+   },
+   "employee 5.aseprite": {
+    "frame": { "x": 140, "y": 0, "w": 26, "h": 47 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 2, "y": 0, "w": 26, "h": 47 },
+    "sourceSize": { "w": 32, "h": 48 },
+    "duration": 80
+   },
+   "employee 6.aseprite": {
+    "frame": { "x": 166, "y": 0, "w": 28, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 0, "w": 28, "h": 48 },
+    "sourceSize": { "w": 32, "h": 48 },
+    "duration": 80
+   },
+   "employee 7.aseprite": {
+    "frame": { "x": 194, "y": 0, "w": 26, "h": 47 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 2, "y": 0, "w": 26, "h": 47 },
+    "sourceSize": { "w": 32, "h": 48 },
+    "duration": 80
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.16.3-x64",
+  "image": "employee.png",
+  "format": "RGBA8888",
+  "size": { "w": 220, "h": 48 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "slices": [
+  ]
+ }
+}

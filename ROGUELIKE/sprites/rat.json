@@ -1,0 +1,87 @@
+{ "frames": {
+   "rat 0.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 39, "h": 12 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 4, "w": 39, "h": 12 },
+    "sourceSize": { "w": 48, "h": 16 },
+    "duration": 80
+   },
+   "rat 1.aseprite": {
+    "frame": { "x": 39, "y": 0, "w": 42, "h": 12 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 4, "w": 42, "h": 12 },
+    "sourceSize": { "w": 48, "h": 16 },
+    "duration": 80
+   },
+   "rat 2.aseprite": {
+    "frame": { "x": 81, "y": 0, "w": 44, "h": 12 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 4, "w": 44, "h": 12 },
+    "sourceSize": { "w": 48, "h": 16 },
+    "duration": 80
+   },
+   "rat 3.aseprite": {
+    "frame": { "x": 125, "y": 0, "w": 41, "h": 13 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 3, "w": 41, "h": 13 },
+    "sourceSize": { "w": 48, "h": 16 },
+    "duration": 80
+   },
+   "rat 4.aseprite": {
+    "frame": { "x": 166, "y": 0, "w": 42, "h": 13 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 3, "w": 42, "h": 13 },
+    "sourceSize": { "w": 48, "h": 16 },
+    "duration": 80
+   },
+   "rat 5.aseprite": {
+    "frame": { "x": 208, "y": 0, "w": 44, "h": 13 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 3, "w": 44, "h": 13 },
+    "sourceSize": { "w": 48, "h": 16 },
+    "duration": 80
+   },
+   "rat 6.aseprite": {
+    "frame": { "x": 252, "y": 0, "w": 43, "h": 14 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 2, "w": 43, "h": 14 },
+    "sourceSize": { "w": 48, "h": 16 },
+    "duration": 80
+   },
+   "rat 7.aseprite": {
+    "frame": { "x": 295, "y": 0, "w": 44, "h": 12 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 4, "w": 44, "h": 12 },
+    "sourceSize": { "w": 48, "h": 16 },
+    "duration": 80
+   },
+   "rat 8.aseprite": {
+    "frame": { "x": 339, "y": 0, "w": 44, "h": 12 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 4, "w": 44, "h": 12 },
+    "sourceSize": { "w": 48, "h": 16 },
+    "duration": 80
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.16.2-x64",
+  "image": "rat.png",
+  "format": "RGBA8888",
+  "size": { "w": 383, "h": 14 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "slices": [
+  ]
+ }
+}

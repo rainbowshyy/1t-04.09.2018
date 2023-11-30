@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>music</title>
+        <link rel="stylesheet" type="text/css" href="musicStylesheet.css">
+    </head>
+    <body>
+        <div id="albumListFilters">
+            <div class="albumListFiltersSection">
+                <div class="windowTitle">Filters:</div>
+                <div class="filterSection">
+                    <div class="filter">Piano</div>
+                    <div class="filter">Drum-heavy</div>
+                    <div class="filter">Acoustic guitar</div>
+                    <div class="filter">Electronic</div>
+                    <div class="filter">Instrumental</div>
+                    <div class="filter">OST</div>
+                    <div class="filter">Rock</div>
+                    <div class="filter">Pop</div>
+                    <div class="filter">Folk/Anti-folk</div>
+                    <div class="filter">K-pop</div>
+                    <div class="filter">Female singer</div>
+                    <div class="filter">Male singer</div>
+                </div>
+            </div>
+            <div class="albumListFiltersSection">
+                <div class="windowTitle">Sort by:</div>
+                <div id="sortBySection">
+                    <div class="sliderSection">
+                        <div class="sliderTitleL">Calm</div>
+                        <input type="range" min="1" max="100" value="50" class="sliderMain" id="slider0" oninput="updateSliders()">
+                        <div class="sliderTitleR">Intense</div>
+                    </div>
+                    <div class="sliderSection">
+                        <div class="sliderTitleL">Sad</div>
+                        <input type="range" min="1" max="100" value="50" class="sliderMain" id="slider1" oninput="updateSliders()">
+                        <div class="sliderTitleR">Happy</div>
+                    </div>
+                    <div class="sliderSection">
+                        <div class="sliderTitleL">Techno</div>
+                        <input type="range" min="1" max="100" value="50" class="sliderMain" id="slider2" oninput="updateSliders()">
+                        <div class="sliderTitleR">Traditional</div>
+                    </div>
+                    <div class="sliderSection">
+                        <div class="sliderTitleL">0 BPM</div>
+                        <input type="range" min="0" max="200" value="100" class="sliderMain" id="slider3" oninput="updateSliders()">
+                        <div class="sliderTitleR">200 BPM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="albumListBig">
+            
+            <div class="albumListBigElement">
+                <a>
+                    <div class="albumListBigCover"></div>
+                    <div class="albumListBigTitle">ahahah</div>
+                    <div class="albumListBigArtist">fdsa</div>
+                </a>
+            </div>
+            
+            <div id="albumListBigNoResult">No results</div>
+        </div>
+        
+        <script src="musicSort.js"></script>
+    </body>
+</html>

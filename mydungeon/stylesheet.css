@@ -1,0 +1,38 @@
+.optionContainer1 {
+    display: block;
+    margin: 5px;
+    color: black;
+}
+
+.optionContainer2 {
+    display: none;
+    margin-left: 10px;
+    color: black;
+}
+
+.selected>.optionContainer2 {
+    display: block;
+}
+
+.selected {
+    color: brown;
+}
+
+.option1, .option2 {
+    z-index: 100;
+}
+
+.abilitiesContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.abilitiesColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.abilitiesElement {
+    display: block;
+}

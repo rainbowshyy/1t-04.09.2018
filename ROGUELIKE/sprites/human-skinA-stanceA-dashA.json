@@ -1,0 +1,95 @@
+{ "frames": {
+   "human-skinA-stanceA-dashA 0.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 39, "h": 66 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 18, "y": 14, "w": 39, "h": 66 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-dashA 1.aseprite": {
+    "frame": { "x": 39, "y": 0, "w": 39, "h": 66 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 18, "y": 14, "w": 39, "h": 66 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-dashA 2.aseprite": {
+    "frame": { "x": 78, "y": 0, "w": 43, "h": 65 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 14, "y": 13, "w": 43, "h": 65 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-dashA 3.aseprite": {
+    "frame": { "x": 121, "y": 0, "w": 43, "h": 65 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 14, "y": 12, "w": 43, "h": 65 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-dashA 4.aseprite": {
+    "frame": { "x": 164, "y": 0, "w": 43, "h": 65 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 15, "y": 11, "w": 43, "h": 65 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-dashA 5.aseprite": {
+    "frame": { "x": 207, "y": 0, "w": 43, "h": 65 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 15, "y": 11, "w": 43, "h": 65 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-dashA 6.aseprite": {
+    "frame": { "x": 250, "y": 0, "w": 43, "h": 65 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 15, "y": 11, "w": 43, "h": 65 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-dashA 7.aseprite": {
+    "frame": { "x": 293, "y": 0, "w": 42, "h": 65 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 15, "y": 11, "w": 42, "h": 65 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-dashA 8.aseprite": {
+    "frame": { "x": 335, "y": 0, "w": 43, "h": 65 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 15, "y": 12, "w": 43, "h": 65 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   },
+   "human-skinA-stanceA-dashA 9.aseprite": {
+    "frame": { "x": 378, "y": 0, "w": 43, "h": 65 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 14, "y": 14, "w": 43, "h": 65 },
+    "sourceSize": { "w": 80, "h": 96 },
+    "duration": 60
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.15-x64",
+  "image": "human-skinA-stanceA-dashA.png",
+  "format": "I8",
+  "size": { "w": 800, "h": 96 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "slices": [
+  ]
+ }
+}

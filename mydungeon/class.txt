@@ -1,0 +1,74 @@
+CLASS
+classid INT
+name VARCHAR(45)
+diceid INT
+savingthrow1 INT
+savingthrow2 INT
+skillchoice INT
+spellability INT(NULL)
+domainid INT(NULL)
+
+CLASSLEVEL
+classid INT
+level INT
+proficiency INT
+cantrips INT
+spells INT
+spell1 INT
+spell2 INT
+spell3 INT
+spell4 INT
+spell5 INT
+spell6 INT
+spell7 INT
+spell8 INT
+spell9 INT
+rages INT(NULL)
+ragedmg INT(NULL)
+martialdiceid INT(NULL)
+ki INT(NULL)
+unarmoredmovement INT(NULL)
+sneakdiceid INT(NULL)
+sorcery INT(NULL)
+slotlevel INT(NULL)
+invocation INT(NULL
+
+SUBCLASS
+subclassid INT
+classid INT
+name VARCHAR(45)
+
+SUBCLASSLEVEL
+subclassid INT
+level INT
+cantrips INT(NULL)
+spells INT(NULL)
+spell1 INT(NULL)
+spell2 INT(NULL)
+spell3 INT(NULL)
+spell4 INT(NULL)
+spell5 INT(NULL)
+
+CLASSTRAIT
+classid INT
+traitid INT
+level INT
+
+SUBCLASSTRAIT
+subclassid INT
+traitid INT
+level INT
+
+CLASSEQUIPMENT
+classid INT
+choice INT
+itemid1 INT
+amount1 INT
+itemid2 INT(NULL)
+amount2 INT(NULL)
+
+TRAIT
+traitid
+name
+desc
+...a whole lot of fucking columns

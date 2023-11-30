@@ -1,0 +1,138 @@
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    color: rgb(250,250,250);
+}
+
+div {
+    display: inline-block;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#form {
+    margin: 20px;
+    border: 2px solid rgb(250,250,250);
+    padding: 50px;
+    color: rgb(250,250,250);
+    width: 500px;
+}
+
+#nameBox {
+    border: 2px solid rgb(250,250,250);
+    height: 50px;
+    width: 300px;
+    padding: 5px;
+    display: inline-block;
+}
+
+#letterBox {
+    border: 2px solid rgb(250,250,250);
+    height: 110px;
+    width: 150px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+#birthDate {
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid rgb(250,250,250);
+    color: rgb(250,250,250);
+    width: 200px;
+    text-align: center;
+    display: inline-block;
+}
+
+.input {
+    border: 2px solid rgb(250,250,250);
+    padding: 5px;
+    margin: 5px;
+    width: 400px;
+    background-color: black;
+    color: rgb(250,250,250);
+}
+
+#letter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.button {
+    border: 2px solid rgb(250,250,250);
+    padding: 5px;
+    margin: 5px;
+    color: rgb(250,250,250);
+    background-color: black;
+}
+
+.letter {
+    display: inline-block;
+    margin: 5px;
+    margin-bottom: 1px;
+    color: rgb(250,250,250);
+    cursor: grab;
+}
+
+.letterFloat {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: rgb(250,250,250);
+    cursor: grab;
+}
+.sliderSection {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.sliderTitleL {
+    width: 50px;
+    text-align: left;
+}
+
+.sliderMain {
+    width: 400px;
+    margin-right: 5%;
+    height: 15px;
+    align-self: center;
+    background-color: black;
+    border: solid 2px rgb(250,250,250);
+    -webkit-appearance: none;
+}
+
+.sliderMain::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: black;
+    cursor: pointer;
+    border: solid 2px rgb(250,250,250);
+}
+
+.sliderTitleR {
+    text-align: right;
+    width: 50px;
+}
+
+#submit {
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: top 0.15s, left 0.15s;
+}

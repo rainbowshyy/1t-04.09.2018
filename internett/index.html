@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Internett</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                Internett
+            </div>
+            <div class="text">
+                <span class="keyword" onclick="showKeyword(0)">Internettet</span> er hvordan du nettopp kommuniserte med en server som inneholder informasjonen krevd for å vise denne nettsiden. Først så var du <span class="keyword" onclick="showKeyword(2)">(klienten)</span> nødt til å oppgi “adressen” til nettsiden, og sende en forespørsel om selve informasjonen. Den består av noe kalt <span class="keyword" onclick="showKeyword(8)">http</span> og domenenavn, som sammen er en <span class="keyword" onclick="showKeyword(4)">URL</span>. Domenenavnet i dette tilfellet var klasserom.net delen av http://www.klasserom.net/200/elev20015/it1/internett. Denne teksten leder egentlig kun til en <span class="keyword" onclick="showKeyword(6)">IP-adresse</span> som igjen fører til <span class="keyword" onclick="showKeyword(3)">tjeneren</span> ved hjelp av en domenenavntjener. Men først, blir informasjonen sendt til ruteren på det lokale <span class="keyword" onclick="showKeyword(1)">nettverket</span>. Ruteren vil da videresende forespørselen til <span class="keyword" onclick="showKeyword(3)">tjeneren</span> som har den oppgitte <span class="keyword" onclick="showKeyword(6)">IP-adressen</span>. <span class="keyword" onclick="showKeyword(3)">Tjeneren</span> kan da behandle forespørsellen slik at den kan sende informasjon tilbake. <span class="keyword" onclick="showKeyword(7)">TCP</span> er <span class="keyword" onclick="showKeyword(5)">protokollen</span> som brukes så til å dele informasjonen i mindre “pakker” som i tillegg inneholder informasjon om hvordan klienten så skal behandle pakkene når de er mottatt. Også, når alle pakkene er kommet frem, er det bare opp til nettleseren å vise nettsiden til deg. Derimot, om du skrev adressen feil, eller om jeg har gjort noe galt, kunne du ha blitt møtt med en <span class="keyword" onclick="showKeyword(9)">feilmelding</span> i stedet.
+            </div>
+            <div class="text" id="informasjon">
+                <i>Trykk på et <span class="keyword">ord</span> som ser slik ut for å få vite mer om det.</i>
+            </div>
+        </div>
+        <script src="keyword.js"></script>
+    </body>
+</html>

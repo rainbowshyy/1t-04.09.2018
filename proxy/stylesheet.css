@@ -1,0 +1,62 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    cursor: none;
+}
+
+#sexDestroyer {
+    height: 150vh;
+    width: 70vw;
+    background-image: url(img/sexDestroyer.png);
+    background-size: 100% 100%;
+    position: absolute;
+    right: -90%;
+    top: 30%;
+    transform-origin: bottom right;
+    z-index: 10000;
+}
+
+#packet {
+    position: absolute;
+    bottom: 5%;
+    left: -20%;
+    width: 20vw;
+    height: 20vh;
+    background-image: url(img/packet.PNG);
+    background-size: 100% 100%;
+}
+
+#packetText {
+    position: relative;
+    bottom: 40%;
+    white-space: nowrap;
+    font-size: 2vw;
+    color: blue;
+}
+
+#score {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    font-size: 2vw;
+    color: black;
+}
+
+#gameOver {
+    position: absolute;
+    padding-top: 40vh;
+    font-size: 7vw;
+    color: red;
+    text-align: center;
+    width: 100%;
+    z-index: 100000000;
+    display: none;
+}
+
+#help {
+    position: absolute;
+    top: 7%;
+    left: 2%;
+    width: 20vw;
+}

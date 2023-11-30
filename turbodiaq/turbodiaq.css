@@ -1,0 +1,606 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+}
+
+div {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    min-height: 100%;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    font-size: 1.5vw;
+    font-family: serif;
+    font-weight: 700;
+    color: beige;
+    overflow: hidden;
+    flex-wrap: nowrap;
+}
+
+#game_focus {
+    order: 2;
+    margin: 0;
+    height: 100%;
+    flex-basis: 65%;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#essential_stats {
+    order: 3;
+    margin: 0;
+    width: 100%;
+    flex-basis: 15%;
+    background-color: rgb(61, 58, 53);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#stats_content {
+    margin: 10px;
+    margin-right: 0;
+    flex: 1;
+    background-color: beige;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    background-image: radial-gradient(ellipse at center,rgba(0,0,0,0)60%, rgba(0,0,0,0.2) 80%,rgba(0,0,0,0.4) 90%,rgba(0,0,0,0.7) 100%);
+    z-index: 500;
+}
+
+#enemy_info {
+    order: 1;
+    flex-basis: 12%;
+    margin: 0;
+    width: 100%;
+    background-color: rgb(61, 58, 53);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    font-size: 85%;
+}
+
+#enemy_info_content {
+    margin: 10px;
+    margin-right: 0;
+    flex: 1;
+    background-color: beige;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    background-image: radial-gradient(ellipse at center,rgba(0,0,0,0)60%, rgba(0,0,0,0.2) 80%,rgba(0,0,0,0.4) 90%,rgba(0,0,0,0.7) 100%);
+    z-index: 500;
+}
+
+#enemy_info_text {
+    order: 1;
+    flex-basis: 80%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+#enemy_info_area {
+    order: 1;
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+#enemy_info_area_text {
+    order: 2;
+    flex-basis: 100%;
+    text-align: left;
+    margin-left: 5%;
+}
+
+#enemy_info_region_text {
+    order: 1;
+    flex-basis: 100%;
+    text-align: left;
+    margin-left: 5%;
+}
+
+#enemy_info_current_enemy {
+    order: 2;
+    flex-basis: 50%;
+}
+
+#enemy_info_current_enemy_name {
+    font-size: 1.8vw;
+    color: white;
+    font-family: serif;
+    font-weight: 700;
+    text-shadow: 0 0 2vw rgba(255,50,50,1), 0 0 0.4vw rgba(0,0,0,1);
+}
+
+#enemy_info_current_enemy_level {
+    font-size: 1vw;
+    color: white;
+    font-family: serif;
+    font-weight: 700;
+    text-shadow: 0 0 2vw rgba(255,50,50,1), 0 0 0.4vw rgba(0,0,0,1);
+}
+
+#enemy_info_enemies {
+    order: 3;
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: row;
+}
+
+#enemy_info_enemies_left {
+    order: 1;
+    flex-basis: 50%;
+    text-align: right;
+    margin-right: 5%;
+}
+
+#auto_progress_checkbox {
+    order: 2;
+    flex-basis: 50%;
+    text-align: right;
+}
+
+.bar {
+    text-align: center;
+    background-color: black;
+    flex-basis: 40%;
+    color: white;
+    font-size: 70%;
+    overflow: hidden;
+}
+
+#current_enemy_health {
+    background: url(img/enemy_healthbar.jpg);
+    background-repeat: repeat-x;
+    background-position: 0px;
+    background-size: 550px 200%;
+    height: 100%;
+}
+
+#current_health {
+    background: url(img/healthbar.jpg);
+    background-repeat: repeat-x;
+    background-position: 0px;
+    background-size: 550px 100%;
+    height: 100%;
+
+}
+
+#current_mana {
+    background: url(img/manabar.jpg);
+    background-repeat: repeat-x;
+    background-position: 0px;
+    background-size: 550px 100%;
+    height: 100%;
+}
+
+.bar_fade {
+    position: relative;
+    bottom: 100%;
+    left: 97%;
+    height: 100%;
+    width: 8%;
+    background: linear-gradient(to left, rgba(0,0,0,1) 25%,rgba(0,0,0,0) 100%);
+    transition: left 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.bar_animation {
+    animation-name: bar_animation;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    transition: width 0.3s;
+    transition-timing-function: ease-out;
+}
+
+@keyframes bar_animation {
+    0% {background-position: 0px;}
+    100% {background-position: -550px;}
+}
+
+.bar_overlay {
+    position: relative;
+    bottom: 200%;
+    background: linear-gradient(to right, rgba(0,0,0,0.6) 0.3%, rgba(0,0,0,0.2) 1%), linear-gradient(to bottom, rgba(255,255,255,0.1) 5%, rgba(255,255,255,0.7) 10%, rgba(255,255,255,0) 30%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0.9) 100%);
+    width: 100%;
+    height: 100%;
+}
+
+.bar_number {
+    position: relative;
+    bottom: 290%;
+}   
+
+#current_exp {
+    background: url(img/expbar.jpg);
+    background-repeat: repeat-x;
+    background-position: 0px;
+    background-size: 550px 200%;
+    height: 100%;
+}
+
+.shake {
+    animation: shake;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes shake {
+    0%, 100% {left: 0px;}
+    20%, 60% {left: 6px;}
+    40%, 80% {left: -6px;}
+}
+
+#graphics {
+    position: relative;
+    order: 2;
+    margin: 0;
+    width: 100%;
+    flex-basis: 73%;
+    background-color: orange;
+    background-image: radial-gradient(ellipse at center,rgba(0,0,0,0)60%, rgba(0,0,0,0.2) 70%,rgba(0,0,0,0.5) 80%,rgba(0,0,0,0.8) 100%);
+    z-index: 0;
+}
+
+#game_info {
+    order: 3;
+    margin: 0;
+    height: 100%;
+    flex-basis: 35%;
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: stretch;
+}
+
+#menu_nav {
+    order: 1;
+    margin: 0;
+    width: 100%;
+    flex-basis: 9.6%;
+    background-color: rgb(61, 58, 53);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#nav_content {
+    margin: 10px;
+    flex: 1;
+    background-color: beige;
+    color: black;
+    background-image: radial-gradient(ellipse at center,rgba(0,0,0,0)60%, rgba(0,0,0,0.2) 80%,rgba(0,0,0,0.4) 90%,rgba(0,0,0,0.7) 100%);
+    z-index: 500;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+#nav_content_header {
+    flex-basis: 80%;
+    align-self: center;
+}
+
+#menu {
+    order 2;
+    width: 100%;
+    flex-basis: 90.4%;
+    background-color: rgb(61, 58, 53);
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    z-index: 20;
+}
+
+#menu_content {
+    position: relative;
+    margin: 10px;
+    margin-top: 0;
+    flex: 1;
+    background-color: beige;
+    color: black;
+    background-image: radial-gradient(ellipse at center,rgba(0,0,0,0)60%, rgba(0,0,0,0.2) 80%,rgba(0,0,0,0.4) 90%,rgba(0,0,0,0.7) 100%);
+    z-index: 500;
+}
+
+#spells {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: rgb(100,100,100);
+}
+
+#attack_timer {
+    position: absolute;
+    transform: translate(50%,0);
+    bottom: 5%;
+    order: 2;
+    flex-basis: 50%;
+    background-color: black;
+    width: 50%;
+    padding-top: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#attack_timer_bar {
+    position: absolute;
+    background-image: url(img/attack_bar.jpg);
+    background-size: 250px 170px;
+    background-repeat: repeat;
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    animation-name: attack_timer_animation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    z-index: 48;
+    pointer-events: none;
+}
+
+@keyframes attack_timer_animation {
+    0% {background-position: 0px;}
+    100% {background-position: -500px;}
+}
+
+#attack_timer_bar_overlay {
+    position: absolute;
+    background-image: radial-gradient(ellipse at center,rgba(0,0,0,0)30%, rgba(0,0,0,0.4) 50%,rgba(0,0,0,0.8) 70%,rgba(0,0,0,1) 100%);
+    height: 90%;
+    width: 91%;
+    border-radius: 50%;
+    transform: translate(5%,-50%);
+    top: 50%;
+    z-index: 50;
+    pointer-events: all;
+}
+
+#attack_timer_bar_overlay:hover {
+    background-image: radial-gradient(ellipse at center,rgba(0,0,0,0)30%, rgba(255,255,255,0.4) 50%,rgba(255,255,255,0.8) 70%,rgba(255,255,255,1) 100%);
+    opacity: 0.6
+}
+
+#attack_timer_bar_hider {
+    position: absolute;
+    background-color: black;
+    height: 5%;
+    width: 100%;
+    top: 0%;
+    z-index: 51;
+    pointer-events: none;
+}
+
+#attack_timer_bar_fade {
+    position: absolute;
+    background-color: black;
+    height: 8%;
+    width: 100%;
+    top: 5%;
+    z-index: 51;
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(0,0,0,0) 25%,rgba(0,0,0,1) 100%);
+}
+
+#skill_tree {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    justify-content: flex-start;
+}
+
+.big_skill_row {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: 15%;
+}
+
+.small_skill_row {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: 7.5%;
+}
+
+.skill_wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.small_skill {
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    height: 100%;
+    padding-left: 20%;
+    z-index: 1000;
+    border-radius: 50%;
+}
+
+.skill_empty {
+    height: 6vw;
+    flex-grow: 0;
+}
+
+.big_skill {
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    height: 100%;
+    padding-left: 20%;
+    z-index: 1000;
+    border-radius: 50%;
+}
+
+.skill_icon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    z-index: 1100;
+    background-color: aqua;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    opacity: 0.5
+}
+
+.skill {
+    background-color: rgb(61, 58, 53);
+    background-color: rgb(20, 20, 20);
+}
+
+.skill:hover {
+    background-color: rgb(101, 98, 93);
+}
+
+.skill:hover .skill_icon {
+    background-image: radial-gradient(ellipse at center,rgba(0,0,0,0)30%, rgba(255,255,255,0.2) 50%,rgba(255,255,255,0.5) 70%,rgba(255,255,255,0.8) 100%);
+}
+
+.big_skill_empty {
+    flex-basis: 30%;
+}
+
+.small_skill_empty {
+    flex-basis: 40%;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    bottom: 100%;
+    left: 50%;
+    flex-direction: row;
+    width: 200%;
+    min-width: 16vw;
+    background-color: rgb(101, 98, 93);
+    z-index: 1000000;
+}
+
+.tooltip_container {
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    height: 100%;
+    padding-left: 20%;
+    z-index: 1000;
+    border-radius: 50%;
+}
+
+.tooltip_container:hover .tooltip {
+    display: flex;
+}
+
+.tooltip_icon {
+    order: 1;
+    flex-basis: 20%;
+    margin: 3%;
+    background-color: aliceblue;
+}
+
+.tooltip_text {
+    order: 2;
+    flex-basis: 80%;
+    margin: 3%;
+    margin-left: 0;
+    color: rgb(200,200,200);
+    text-align: left;
+    font-size: 60%;
+    padding: 3%;
+    padding-top: 0;
+    white-space: normal;
+    background-color: rgb(61, 58, 53);
+}
+
+.tooltip_text b {
+    font-size: 110%;
+    color: rgb(255,255,255)
+}
+
+.notification_wrapper {
+    position: absolute;
+    width: 98%;
+    height: auto;
+    top: 0;
+    margin: 1%;
+    margin-bottom: auto;
+}
+
+.notification {
+    display: none;
+    background: rgb(0,0,0);
+    width: 96%;
+    position: relative;
+    padding: 2%;
+    margin-bottom: 1%;
+}
+
+.notification_close {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    cursor: pointer;
+    transition: 0.1s;
+    color: white;
+    font-size: 150%;
+}
+
+.notification_text {
+    text-align: left;
+    color: white;
+    font-size: 70%;
+}
+
+.notification_text b {
+    font-size: 130%;
+}
+
+.notification_close:hover {
+    color: red;
+}
+
+button {
+    z-index: 1000;
+}

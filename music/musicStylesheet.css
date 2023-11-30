@@ -1,0 +1,170 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: rgb(250,250,250);
+    font-size: 20px;
+}
+
+#albumListBig {
+    margin: 20px;
+    border: 2px solid rgb(250,250,250);
+    text-align: center;
+    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.albumListBigElement {
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.albumListBigElement a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.albumListBigCover {
+    width: 70%;
+    height: 70%;
+    transition: width 0.2s, height 0.2s, filter 0.2s;
+    filter: brightness(80%);
+    background-color: aliceblue;
+}
+
+.albumListBigElement a:hover .albumListBigCover{
+    width: 75%;
+    height: 75%;
+    filter: brightness(100%);
+}
+
+.albumListBigTitle {
+    text-align: center;
+    transition: font-size 0.2s;
+}
+
+.albumListBigElement a:hover .albumListBigTitle {
+    font-size: 21px;
+}
+
+.albumListBigArtist {
+    text-align: center;
+    font-size: 14px;
+}
+
+#albumListBigNoResult {
+    display:none;
+    margin: 140px;
+}
+
+#albumListFilters {
+    margin: 20px;
+    border: 2px solid rgb(250,250,250);
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    padding: 50px
+}
+
+.albumListFiltersSection {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.windowTitle {
+    font-size: 32px;
+}
+
+.filterSection {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.filter {
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: solid 2px rgb(250,250,250);
+    transition: background 0.2s, margin 0.2s, padding 0.2s;
+    margin: 10px;
+}
+
+.filter:hover {
+    background-color: rgba(250,250,250,0.5);
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.filterSelected {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: solid 2px rgb(250,250,250);
+    background-color: rgb(250,250,250);
+    color: black;
+}
+
+#sortBySection {
+    display: flex;
+    flex-direction: column;
+}
+
+.sliderSection {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.sliderTitleL {
+    width: 20%;
+    text-align: left;
+    font-size: 24px;
+}
+
+.sliderMain {
+    width: 60%;
+    margin-right: 5%;
+    height: 20px;
+    align-self: center;
+    background-color: black;
+    border: solid 2px rgb(250,250,250);
+    -webkit-appearance: none;
+}
+
+.sliderMain::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 24px;
+    background: black;
+    cursor: pointer;
+    border: solid 2px rgb(250,250,250);
+}
+
+.sliderTitleR {
+    font-size: 24px;
+    text-align: right;
+    width: 20%;
+}

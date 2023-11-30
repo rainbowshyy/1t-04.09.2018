@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Skjema</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </head>
+    <body onmousemove="cursor(event)" onmouseup="clearActive()">
+        <div id="letters"></div>
+        <div id="content">
+            <div id="form">
+                <h3>Registration</h3>
+                Name:
+                <br>
+                <div id="nameBox"><i>Drag and drop letters here:</i></div>
+                <div id="letterBox">
+                    <div class="letter" onmousedown="createLetter('a')">a</div>
+                    <div class="letter" onmousedown="createLetter('b')">b</div>
+                    <div class="letter" onmousedown="createLetter('c')">c</div>
+                    <div class="letter" onmousedown="createLetter('d')">d</div>
+                    <div class="letter" onmousedown="createLetter('e')">e</div>
+                    <div class="letter" onmousedown="createLetter('f')">f</div>
+                    <div class="letter" onmousedown="createLetter('g')">g</div>
+                    <div class="letter" onmousedown="createLetter('h')">h</div>
+                    <div class="letter" onmousedown="createLetter('i')">i</div>
+                    <div class="letter" onmousedown="createLetter('j')">j</div>
+                    <div class="letter" onmousedown="createLetter('k')">k</div>
+                    <div class="letter" onmousedown="createLetter('l')">l</div>
+                    <div class="letter" onmousedown="createLetter('m')">m</div>
+                    <div class="letter" onmousedown="createLetter('n')">n</div>
+                    <div class="letter" onmousedown="createLetter('o')">o</div>
+                    <div class="letter" onmousedown="createLetter('p')">p</div>
+                    <div class="letter" onmousedown="createLetter('q')">q</div>
+                    <div class="letter" onmousedown="createLetter('r')">r</div>
+                    <div class="letter" onmousedown="createLetter('s')">s</div>
+                    <div class="letter" onmousedown="createLetter('t')">t</div>
+                    <div class="letter" onmousedown="createLetter('u')">u</div>
+                    <div class="letter" onmousedown="createLetter('v')">v</div>
+                    <div class="letter" onmousedown="createLetter('w')">w</div>
+                    <div class="letter" onmousedown="createLetter('x')">x</div>
+                    <div class="letter" onmousedown="createLetter('y')">y</div>
+                    <div class="letter" onmousedown="createLetter('z')">z</div>
+                    <div class="letter" onmousedown="createLetter('æ')">æ</div>
+                    <div class="letter" onmousedown="createLetter('ø')">ø</div>
+                    <div class="letter" onmousedown="createLetter('å')">å</div>
+                </div>
+                <br>
+                Date of birth:
+                <br>
+                <button onclick="changeDate(-1)" class="button">Previous day</button>
+                <div id="birthDate">Thu Jan 01 1970</div>
+                <button onclick="changeDate(1)" class="button">Next day</button>
+                <br>
+                Password:
+                <fieldset style="border: none;">
+                    <input type="radio" name="password"><label>Hunter2</label>
+                    <br>
+                    <input type="radio" name="password"><label>tacosalat</label>
+                    <br>
+                    <input type="radio" name="password"><label>password</label>
+                </fieldset>
+                <br>
+                Are you a human?
+                <div class="sliderSection">
+                    <div class="sliderTitleL">No</div>
+                    <input type="range" min="1" max="15000" value="1" class="sliderMain" onmouseup="sliderRelease()" id="gender">
+                    <div class="sliderTitleR">Yes</div>
+                </div>
+                <br>
+                <button onclick="submitForm()" onmouseover="submitHover()" id="submit" class="button">Submit</button>
+            </div>
+        </div>
+        <script src="skjema.js"></script>
+    </body>
+</html>
